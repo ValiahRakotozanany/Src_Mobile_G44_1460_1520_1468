@@ -1,0 +1,7 @@
+{
+  "name": "TP_Rojo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}

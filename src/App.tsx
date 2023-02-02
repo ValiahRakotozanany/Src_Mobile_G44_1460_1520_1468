@@ -12,7 +12,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
+import Tab2 from './pages/rechargement';
 import Tab3 from './pages/Tab3';
 import Inscription from './pages/Inscription';
 import Acceuil from './pages/Acceuil';
@@ -36,6 +36,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import rechargement from './pages/rechargement';
 
 setupIonicReact();
 
@@ -47,6 +48,7 @@ const App: React.FC = () => (
         <Route exact path="/inscription" component={Inscription}/>
         <Route exact path="/acceuil" component={Acceuil}/>
         <Route exact path="/insertionenchere" component={Insertionenchere}/>
+        <Route exact path="/rechargement" component={rechargement}/>
           <Route exact path="/tab1">
 
             <Tab1 />

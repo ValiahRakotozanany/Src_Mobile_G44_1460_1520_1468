@@ -49,8 +49,8 @@ const [tok, setTok] = useState<any>([]);
             'token' :tok
           } ,                  
           body: JSON.stringify({
-            encher,
-            
+            "produit":{"id": idproduit,
+            }
           })
 
       })

@@ -29,6 +29,7 @@ const Acceuil: React.FC = () => {
             </IonToolbar>
           </IonHeader>
           <a href="/insertionenchere">Ajout enchère</a>
+          <a href="/rechargement">Recharger mon compte </a>
         </IonContent>
       </IonPage>
     );

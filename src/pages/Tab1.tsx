@@ -27,7 +27,9 @@ const Tab1: React.FC = () => {
       if (result.status == 500) {  
         alert("utilisateur does not exist");
       } else{
+        console.log(result.token)
         sessionStorage.setItem('token',result.token);  
+        sessionStorage.setItem('iduser',result.utilisateurid);  
         //window.location.replace('/listevehicule');
         window.location.replace("/acceuil");
       }

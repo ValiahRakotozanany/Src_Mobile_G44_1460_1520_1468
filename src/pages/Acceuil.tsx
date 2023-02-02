@@ -11,6 +11,7 @@ const Acceuil: React.FC = () => {
         alert(nom+" "+prenom+" "+email+" "+motdepasse);
         redirection();
     }
+    
     const redirection = () => {
         window.location.replace("/Tab1")
     }

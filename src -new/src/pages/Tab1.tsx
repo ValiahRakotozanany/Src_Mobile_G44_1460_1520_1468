@@ -1,14 +1,11 @@
-import { IonButton,IonInput, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonToast, useIonToast } from '@ionic/react';
-import { globe } from 'ionicons/icons';
+import { IonButton,IonInput, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React,{useState,useEffect} from 'react';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
   const [email,setEmail]=useState<any>([]);
   const [motdepasse,setMotdepasse]=useState<any>([]);
-  const [token,setToken] = useState<any | null>(null);
-  const [toast] = useIonToast();
-
+  const [token,setToken] = useState<any | null>(null)
   var util={
     'email' :''+email+'',
     'motdepasse' : ''+motdepasse+'',
@@ -25,19 +22,13 @@ const Tab1: React.FC = () => {
       })
       .then(res=>res.json())
       .then((result)=>{
-      //IonToast(result)
+      alert(JSON.stringify(result))
       setToken(result);
       if (result.status == 500) {  
-     //   IonToast("utilisateur does not exist");
-     toast ({
-      message :"Utilisareur inexistant ",
-      duration :1500,
-      icon: globe,
-    })
+        alert("utilisateur does not exist");
       } else{
-        console.log(result.token)
         sessionStorage.setItem('token',result.token);  
-        sessionStorage.setItem('iduser',result.utilisateurid);  
+        sessionStorage.setItem('idutilisateur',result.utilisateurid);
         //window.location.replace('/listevehicule');
         window.location.replace("/acceuil");
       }

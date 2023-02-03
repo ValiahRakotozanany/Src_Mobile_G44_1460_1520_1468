@@ -11,16 +11,9 @@ const Acceuil: React.FC = () => {
         alert(nom+" "+prenom+" "+email+" "+motdepasse);
         redirection();
     }
-    
     const redirection = () => {
         window.location.replace("/Tab1")
     }
-    
-    const logout = () => {
-      sessionStorage.removeItem('token');
-      sessionStorage.removeItem('iduser');
-      window.location.replace("/Tab1")
-  }
     return (
       <IonPage>
         <IonHeader>
@@ -34,10 +27,7 @@ const Acceuil: React.FC = () => {
               <IonTitle size="large">Acceuil</IonTitle>
             </IonToolbar>
           </IonHeader>
-          <a href="/insertionenchere">Ajout enchère</a><br></br>
-          <a href="/historique">Mes encheres et leur status </a><br></br>
-          <a href="/rechargement">Recharger mon compte </a><br></br>
-          <IonButton onClick={()=>logout()} >Log out </IonButton>
+          <a href="/insertionenchere">Ajout enchère</a>
         </IonContent>
       </IonPage>
     );
